@@ -19,6 +19,10 @@ Provide custom alerts for incorrect value inputs and data integrity issues when 
 Print a report of all appoinments stored in the database to a .txt file, then display a textfield popup with the information read from the file.
 
 Uses the JavaFX pluggin from Gluon as a dependancy.
-
 For SDK 14, with Java 8.
+Uses JDBC driver as a dependancy.
+
+*********Login info*************
+Username: admin
+Password: admin
 
