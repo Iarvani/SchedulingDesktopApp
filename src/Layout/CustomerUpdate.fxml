@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.CustomerUpdateController">
+    <children>
+        <Label fx:id="clientLbl" layoutX="28.0" layoutY="18.0" prefHeight="30.0" prefWidth="289.0" text="Update Customer Information" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Label fx:id="currentUserLbl" layoutX="795.0" layoutY="24.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="userLbl" layoutX="729.0" layoutY="24.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="729.0" layoutY="51.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="795.0" layoutY="51.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+        <Button fx:id="custUpdateBtn" accessibleHelp="Add a customer." layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#updateButton" prefHeight="47.0" prefWidth="120.0" text="Update" />
+        <Button fx:id="custClearBtn" accessibleHelp="Clear text fields." layoutX="193.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="47.0" prefWidth="120.0" text="Clear" />
+        <Button fx:id="custDeleteBtn" accessibleHelp="Delete existing customer." layoutX="354.0" layoutY="321.0" mnemonicParsing="false" onAction="#deleteButton" prefHeight="47.0" prefWidth="120.0" text="Delete" />
+        <Button fx:id="custHomeBtn" accessibleHelp="Return to home screen." layoutX="616.0" layoutY="321.0" mnemonicParsing="false" onAction="#openCustomerHomeScreen" prefHeight="47.0" prefWidth="120.0" text="Customer Home" />
+        <Button fx:id="custExitBtn" accessibleHelp="Exit program." layoutX="778.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <Label fx:id="cUpdateNameLbl" layoutX="28.0" layoutY="84.0" prefHeight="25.0" prefWidth="86.0" text="Name" />
+        <Label fx:id="cUpdateAddressLbl" layoutX="28.0" layoutY="114.0" prefHeight="25.0" prefWidth="86.0" text="Address" />
+        <Label fx:id="cUpdateAddress2Lbl" layoutX="28.0" layoutY="144.0" prefHeight="25.0" prefWidth="86.0" text="Address 2" />
+        <Label fx:id="cUpdatePCodeLbl" layoutX="28.0" layoutY="174.0" prefHeight="25.0" prefWidth="86.0" text="Postal Code" />
+        <Label fx:id="cUpdatePhoneLbl" layoutX="28.0" layoutY="204.0" prefHeight="25.0" prefWidth="86.0" text="Phone Number" />
+        <Label fx:id="cUpdateDivisionLbl" layoutX="28.0" layoutY="251.0" prefHeight="17.0" prefWidth="66.0" text="Divison" />
+        <ComboBox fx:id="cUpdateDivisionBox" layoutX="118.0" layoutY="247.0" onAction="#divisionBoxChange" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Select Division" />
+        <Label fx:id="cUpdateCountryLbl" layoutX="28.0" layoutY="284.0" prefHeight="17.0" prefWidth="66.0" text="Country" />
+        <ComboBox fx:id="cUpdateCountryBox" layoutX="118.0" layoutY="280.0" onAction="#countryBoxChange" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Select Country" />
+        <TextField fx:id="cUpdateNameField" alignment="CENTER" layoutX="118.0" layoutY="85.0" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Name" />
+        <TextField fx:id="cUpdateAddressField" alignment="CENTER" layoutX="119.0" layoutY="115.0" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Address" />
+        <TextField fx:id="cUpdateAddress2Field" alignment="CENTER" layoutX="118.0" layoutY="145.0" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Address 2" />
+        <TextField fx:id="cUpdateZipField" alignment="CENTER" layoutX="119.0" layoutY="175.0" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Zip" />
+        <TextField fx:id="cUpdatePhoneField" alignment="CENTER" layoutX="119.0" layoutY="205.0" disable="true" prefHeight="25.0" prefWidth="189.0" promptText="Phone#" />
+        <TextField fx:id="cUpdateIDField" alignment="CENTER" disable="true" editable="false" layoutX="118.0" layoutY="55.0" prefHeight="25.0" prefWidth="189.0" promptText="ID AUTO-GEN">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+        <TableView fx:id="cUpdateTbl" layoutX="322.0" layoutY="73.0" onMouseClicked="#clickItem" prefHeight="243.0" prefWidth="588.0">
+            <columns>
+                <TableColumn fx:id="cUpdateCustIDCol" prefWidth="46.0" text="ID" />
+                <TableColumn fx:id="cUpdateCustNameCol" prefWidth="164.0" text="Name" />
+                <TableColumn fx:id="cUpdateCustAddressCol" prefWidth="244.0" text="address" />
+                <TableColumn fx:id="cUpdateCustPhoneCol" prefWidth="133.0" text="phone" />
+            </columns>
+        </TableView>
+        <Label fx:id="cUpdateIDLbl" layoutX="28.0" layoutY="54.0" prefHeight="25.0" prefWidth="75.0" text="Customer ID" />
+    </children>
+</AnchorPane>

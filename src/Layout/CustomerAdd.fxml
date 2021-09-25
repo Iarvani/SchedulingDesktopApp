@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.CustomerAddController">
+    <children>
+        <Label fx:id="cAddClientLbl" layoutX="28.0" layoutY="18.0" prefHeight="30.0" prefWidth="167.0" text="Add A Customer" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Label fx:id="currentUserLbl" layoutX="540.0" layoutY="24.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="cAddUserLbl" layoutX="464.0" layoutY="24.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="464.0" layoutY="51.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="540.0" layoutY="51.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+        <Button fx:id="cAddAddBtn" accessibleHelp="Add a customer." layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#addCustomerButton" prefHeight="47.0" prefWidth="120.0" text="Add" />
+        <Button fx:id="cAddClearBtn" accessibleHelp="Delete existing customer." layoutX="193.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="47.0" prefWidth="120.0" text="Clear" />
+        <Button fx:id="cAddHomeBtn" accessibleHelp="Return to customer home screen." layoutX="352.0" layoutY="321.0" mnemonicParsing="false" onAction="#openCustomerHomeScreen" prefHeight="47.0" prefWidth="120.0" text="Customer Home" />
+        <Button fx:id="cAddExitBtn" accessibleHelp="Return to home screen." layoutX="506.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <Label fx:id="cAddNameLbl" layoutX="28.0" layoutY="118.0" prefHeight="30.0" prefWidth="86.0" text="Name" />
+        <Label fx:id="cAddAddressLbl" layoutX="28.0" layoutY="158.0" prefHeight="30.0" prefWidth="86.0" text="Address" />
+        <Label fx:id="cAddPCodeLbl" layoutX="28.0" layoutY="234.0" prefHeight="30.0" prefWidth="86.0" text="Postal Code" />
+        <Label fx:id="cAddPhoneLbl" layoutX="28.0" layoutY="272.0" prefHeight="30.0" prefWidth="86.0" text="Phone Number" />
+        <Label fx:id="cAddDivisionLbl" layoutX="334.0" layoutY="214.0" prefHeight="17.0" prefWidth="57.0" text="Divison" />
+        <ComboBox fx:id="cAddDivisionComboBox" disable="true" layoutX="400.0" layoutY="210.0" prefWidth="150.0" promptText="Select Division">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Label fx:id="cAddCountryLbl" layoutX="334.0" layoutY="121.0" prefHeight="17.0" prefWidth="57.0" text="Country" />
+        <ComboBox fx:id="cAddCountryComboBox" layoutX="400.0" layoutY="117.0" prefWidth="150.0" onAction="#countryBoxSelected" promptText="Select Country">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <TextField fx:id="cAddNameField" alignment="CENTER" layoutX="119.0" layoutY="120.0" prefHeight="25.0" prefWidth="189.0" promptText="Name" />
+        <TextField fx:id="cAddAddressField" alignment="CENTER" layoutX="119.0" layoutY="160.0" prefHeight="25.0" prefWidth="189.0" promptText="Address" />
+        <TextField fx:id="cAddZipField" alignment="CENTER" layoutX="119.0" layoutY="237.0" prefHeight="25.0" prefWidth="189.0" promptText="Zip" />
+        <TextField fx:id="cAddPhoneField" alignment="CENTER" layoutX="119.0" layoutY="275.0" prefHeight="25.0" prefWidth="189.0" promptText="Phone#" />
+        <Label fx:id="cAddCustIDLbl" layoutX="28.0" layoutY="80.0" prefHeight="25.0" prefWidth="86.0" text="Customer ID" />
+        <TextField fx:id="cAddIDField" alignment="CENTER" disable="true" editable="false" layoutX="119.0" layoutY="80.0" prefHeight="25.0" prefWidth="189.0" promptText="ID AUTO-GEN">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+        <Button fx:id="autoAddBtn" layoutX="287.0" layoutY="29.0" onAction="#autoFillButton" mnemonicParsing="false" text="Auto Add" />
+        <Label fx:id="cAddAddress2Lbl" layoutX="25.0" layoutY="195.0" prefHeight="30.0" prefWidth="67.0" text=" Address 2" />
+        <TextField fx:id="cAddAddress2Field" alignment="CENTER" layoutX="119.0" layoutY="197.0" prefHeight="25.0" prefWidth="189.0" promptText="Address" />
+    </children>
+</AnchorPane>

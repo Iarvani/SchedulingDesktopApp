@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.HomeScreenController">
+    <children>
+
+        <!-- User Logged in and language labels -->
+        <Label fx:id="currentUserLbl" layoutX="775.0" layoutY="16.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="userLbl" layoutX="695.0" layoutY="16.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="695.0" layoutY="37.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="775.0" layoutY="37.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+
+        <!-- Customer Screen Buttons -->
+        <Button fx:id="custUpdateScrBtn" accessibleHelp="Update existing customer." layoutX="281.0" layoutY="337.0" mnemonicParsing="false" onAction="#openCustomerUpdateScreen" prefHeight="37.0" prefWidth="103.0" text="Update" />
+        <Button fx:id="custAddScrBtn" accessibleHelp="Delete existing customer." layoutX="164.0" layoutY="337.0" mnemonicParsing="false" onAction="#openCustomerAddScreen" prefHeight="37.0" prefWidth="103.0" text="Add" />
+        <Button fx:id="custHomeScrBtn" accessibleHelp="Return to home screen." layoutX="46.0" layoutY="337.0" mnemonicParsing="false" onAction="#openCustomerHomeScreen" prefHeight="37.0" prefWidth="103.0" text="Home" />
+
+        <!-- Logo image loader -->
+        <ImageView fx:id="logoImg" fitHeight="62.0" fitWidth="274.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+
+        <!-- Section titles -->
+        <Label fx:id="custOptionsLbl" alignment="CENTER" layoutX="58.0" layoutY="286.0" prefHeight="37.0" prefWidth="315.0" text="Customer options">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Label fx:id="appOptionsLbl" alignment="CENTER" layoutX="460.0" layoutY="286.0" prefHeight="37.0" prefWidth="243.0" text="Appointments options" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Label fx:id="viewAppByLbl" layoutX="27.0" layoutY="76.0" prefHeight="17.0" prefWidth="133.0" text="View Appointments By:" />
+        <Label fx:id="scheduleAppLbl" layoutX="27.0" layoutY="16.0" prefHeight="37.0" prefWidth="633.0" text="Scheduling Application Home">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+
+        <!-- Appointment Screen buttons -->
+        <Button fx:id="appUpdateScrBtn" accessibleHelp="Update existing appointment." layoutX="643.0" layoutY="337.0" mnemonicParsing="false" onAction="#openAppointmentsUpdateScreen" prefHeight="37.0" prefWidth="103.0" text="Update" />
+        <Button fx:id="appHomeScrBtn" accessibleHelp="Open appointment home screen." layoutX="413.0" layoutY="337.0" mnemonicParsing="false" onAction="#openAppointmentsHomeScreen" prefHeight="37.0" prefWidth="103.0" text="Home" />
+        <Button fx:id="appAddScrBtn" accessibleHelp="Open appointment add screen." layoutX="530.0" layoutY="337.0" mnemonicParsing="false" onAction="#openAppointmentsAddScreen" prefHeight="37.0" prefWidth="103.0" text="Add" />
+
+        <Button fx:id="exitBtn" accessibleHelp="Exit program." layoutX="775.0" layoutY="332.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <Separator layoutX="398.0" layoutY="269.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="0.0" />
+        <Separator layoutX="760.0" layoutY="269.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="6.0" />
+
+        <!-- Table for upcomming appointments -->
+        <TableView fx:id="nearAppsTbl" layoutX="27.0" layoutY="96.0" prefHeight="190.0" prefWidth="858.0">
+            <columns>
+                <TableColumn fx:id="tableIDCol" text="ID" />
+                <TableColumn fx:id="tableTitleCol" text="Title" />
+                <TableColumn fx:id="tableDescCol" text="Description" />
+                <TableColumn fx:id="tableContactCol" minWidth="0.0" text="Contact" />
+                <TableColumn fx:id="tableCustomerCol" minWidth="0.0" text="Customer" />
+                <TableColumn fx:id="tableLocCol" text="Location" />
+                <TableColumn fx:id="tableTypeCol" text="Type" />
+                <TableColumn fx:id="tableStartCol" text="Start Time" />
+                <TableColumn fx:id="tableEndCol" text="End Time" />
+                <TableColumn fx:id="tableDateCol" text="Start Date" />
+            </columns>
+        </TableView>
+        <RadioButton fx:id="monthRadioBtn" layoutX="160.0" layoutY="76.0" mnemonicParsing="false" onAction="#searchByMonth" text="Month" />
+        <RadioButton fx:id="weekRadioBtn" layoutX="224.0" layoutY="76.0" mnemonicParsing="false" onAction="#searchByWeek" text="Week" />
+      <Button fx:id="getCustomerReportBtn" layoutX="401.0" layoutY="64.0" mnemonicParsing="false" onAction="#getCustomerReport" prefHeight="25.0" prefWidth="180.0" text="Get customer report" />
+      <Button fx:id="getContactReportBtn" layoutX="401.0" layoutY="37.0" mnemonicParsing="false" onAction="#getContactReport" prefHeight="25.0" prefWidth="180.0" text="Get contact report" />
+      <Button fx:id="getUserReportBtn" layoutX="401.0" layoutY="10.0" mnemonicParsing="false" onAction="#getUserReport" prefHeight="25.0" prefWidth="180.0" text="Get user report" />
+      <RadioButton fx:id="allRadioBtn" layoutX="284.0" layoutY="76.0" mnemonicParsing="false" onAction="#allRadioBtn" text="All" />
+    </children>
+</AnchorPane>

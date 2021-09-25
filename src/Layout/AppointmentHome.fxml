@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.AppointmentHomeController">
+    <children>
+        <Label fx:id="appHomeTitleLbl" layoutX="22.0" layoutY="18.0" prefHeight="31.0" prefWidth="390.0" text="Appointments Home" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font></Label>
+        <Label fx:id="currentUserLbl" layoutX="540.0" layoutY="24.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="userLbl" layoutX="464.0" layoutY="24.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="464.0" layoutY="51.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="540.0" layoutY="51.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+        <Button fx:id="appAddBtn" accessibleHelp="Add an appointment." layoutX="22.0" layoutY="321.0" mnemonicParsing="false" onAction="#openAppointmentAddScreen" prefHeight="47.0" prefWidth="120.0" text="Add" />
+        <Button fx:id="appUpdateBtn" accessibleHelp="Update existing appointment." layoutX="148.0" layoutY="321.0" mnemonicParsing="false" onAction="#openAppointmentUpdateScreen" prefHeight="47.0" prefWidth="120.0" text="Update" />
+        <Button fx:id="homeBtn" accessibleHelp="Return to home screen." layoutX="404.0" layoutY="321.0" mnemonicParsing="false" onAction="#openHomeScreen" prefHeight="47.0" prefWidth="120.0" text="Home" />
+        <Button fx:id="exitBtn" accessibleHelp="Exit program." layoutX="532.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <TableView fx:id="appTbl" layoutX="25.0" layoutY="87.0" prefHeight="226.0" prefWidth="623.0">
+            <columns>
+                <TableColumn fx:id="appIDCol" prefWidth="103.0" text="Appointment ID" />
+                <TableColumn fx:id="nameCol" prefWidth="61.0" text="Name" />
+                <TableColumn fx:id="titleCol" prefWidth="268.0" text="Title" />
+                <TableColumn fx:id="startTimeCol" prefWidth="87.0" text="Start Time" />
+                <TableColumn fx:id="endTimeCol" prefWidth="99.0" text="End Time" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

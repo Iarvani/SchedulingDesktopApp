@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.AppointmentAddController">
+    <children>
+        <Label fx:id="appAddSchedLbl" layoutX="22.0" layoutY="18.0" prefHeight="31.0" prefWidth="303.0" text="Add An Appointment" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font></Label>
+        <Label fx:id="currentUserLbl" layoutX="540.0" layoutY="24.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="userLbl" layoutX="464.0" layoutY="24.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="464.0" layoutY="51.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="540.0" layoutY="51.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+        <Label fx:id="appAddAppIDLbl" layoutX="22.0" layoutY="66.0" prefHeight="17.0" prefWidth="93.0" text="Appointment ID: " />
+        <Label fx:id="appAddTitleLbl" layoutX="22.0" layoutY="112.0" text="Title: " />
+        <Label fx:id="appAddDescriptionLbl" layoutX="22.0" layoutY="164.0" text="Description: " />
+        <Label fx:id="appAddLocationLbl" layoutX="22.0" layoutY="218.0" text="Location:" />
+        <Label fx:id="appAddCustomerLbl" layoutX="383.0" layoutY="127.0" prefHeight="17.0" prefWidth="76.0" text="Customer:" />
+        <Label fx:id="appAddTypeLbl" layoutX="22.0" layoutY="266.0" text="Type:" />
+        <Separator layoutX="22.0" layoutY="96.0" prefHeight="3.0" prefWidth="303.0" />
+        <Separator layoutX="405.0" layoutY="163.0" prefHeight="3.0" prefWidth="217.0" />
+        <Separator layoutX="22.0" layoutY="142.0" prefHeight="3.0" prefWidth="303.0" />
+        <Separator layoutX="25.0" layoutY="200.0" prefHeight="3.0" prefWidth="303.0" />
+        <Separator layoutX="25.0" layoutY="248.0" prefHeight="3.0" prefWidth="303.0" />
+        <Label fx:id="appAddStartTimeLbl" layoutX="383.0" layoutY="227.0" prefHeight="17.0" prefWidth="76.0" text="Start time:" />
+        <Label fx:id="appAddEndTimeLbl" layoutX="383.0" layoutY="275.0" prefHeight="17.0" prefWidth="76.0" text="End time:" />
+        <Button fx:id="appAddBtn" accessibleHelp="Add an appointment." layoutX="22.0" layoutY="321.0" mnemonicParsing="false" onAction="#addAppointmentButton" prefHeight="47.0" prefWidth="120.0" text="Add" />
+        <Button fx:id="appAddClearBtn" accessibleHelp="Clear fields." layoutX="196.0" layoutY="321.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="47.0" prefWidth="120.0" text="Clear" />
+        <Button fx:id="appAddHomeBtn" accessibleHelp="Return to Appointment home screen." layoutX="366.0" layoutY="321.0" mnemonicParsing="false" onAction="#openAppointmentHomeScreen" prefHeight="47.0" prefWidth="120.0" text="App Home" />
+        <Button fx:id="appAddExitBtn" accessibleHelp="Exit program." layoutX="532.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <TextField fx:id="appAddIDField" disable="true" editable="false" layoutX="115.0" layoutY="62.0" prefHeight="25.0" prefWidth="149.0" promptText="ID AUTO-GEN">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="appAddTitleField" layoutX="115.0" layoutY="108.0" prefHeight="25.0" prefWidth="217.0" promptText="Title here" />
+        <TextField fx:id="appAddLocationField" layoutX="115.0" layoutY="214.0" prefHeight="25.0" prefWidth="217.0" promptText="Location here" />
+        <TextField fx:id="appAddTypeField" layoutX="115.0" layoutY="262.0" promptText="Type here" />
+        <ComboBox fx:id="appAddCustomerBox" layoutX="472.0" layoutY="123.0" prefHeight="25.0" prefWidth="188.0" promptText="Select Customer" />
+        <Separator layoutX="405.0" layoutY="250.0" prefHeight="3.0" prefWidth="217.0" />
+        <Separator layoutX="366.0" layoutY="56.0" orientation="VERTICAL" prefHeight="239.0" prefWidth="6.0" />
+        <Separator layoutX="405.0" layoutY="107.0" prefHeight="3.0" prefWidth="217.0" />
+        <TextArea fx:id="appAddDescriptionField" layoutX="115.0" layoutY="149.0" prefHeight="47.0" prefWidth="217.0" promptText="Description here" wrapText="true" />
+      <TextField fx:id="appAddStartTimeField" layoutX="472.0" layoutY="223.0" prefHeight="25.0" prefWidth="188.0" promptText="Start Time" />
+      <TextField fx:id="appAddEndTimeField" layoutX="472.0" layoutY="271.0" prefHeight="25.0" prefWidth="188.0" promptText="End Time" />
+      <Label fx:id="appAddContactLbl" layoutX="383.0" layoutY="173.0" prefHeight="17.0" prefWidth="76.0" text="Contact:" />
+      <ComboBox fx:id="appAddContactBox" layoutX="472.0" layoutY="169.0" prefHeight="25.0" prefWidth="188.0" promptText="Select Contact" />
+      <Separator layoutX="405.0" layoutY="213.0" prefHeight="3.0" prefWidth="217.0" />
+      <ComboBox fx:id="userComboBox" layoutX="472.0" layoutY="75.0" prefHeight="25.0" prefWidth="188.0" promptText="Select User" />
+      <Label fx:id="userComboLbl" layoutX="383.0" layoutY="79.0" prefHeight="17.0" prefWidth="66.0" text="User:" />
+    </children>
+
+</AnchorPane>

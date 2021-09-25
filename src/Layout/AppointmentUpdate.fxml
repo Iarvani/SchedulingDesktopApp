@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.AppointmentUpdateController">
+    <children>
+        <Label fx:id="updateAppTitleLbl" layoutX="22.0" layoutY="18.0" prefHeight="31.0" prefWidth="421.0" text="Update/Delete Appointments" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font></Label>
+        <Label fx:id="currentUserLbl" layoutX="801.0" layoutY="16.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="userLbl" layoutX="735.0" layoutY="16.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="735.0" layoutY="41.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="801.0" layoutY="41.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+        <Button fx:id="clearBtn" accessibleHelp="Clear fields." layoutX="155.0" layoutY="743.0" mnemonicParsing="false" onAction="#clearButton" prefHeight="47.0" prefWidth="120.0" text="Clear" />
+        <Button fx:id="updateBtn" accessibleHelp="Update existing appointment." layoutX="19.0" layoutY="743.0" mnemonicParsing="false" onAction="#updateAppointmentButton" prefHeight="47.0" prefWidth="120.0" text="Update" />
+        <Button fx:id="deleteBtn" accessibleHelp="Delete an appointment." layoutX="289.0" layoutY="743.0" mnemonicParsing="false" onAction="#deleteAppointmentButton" prefHeight="47.0" prefWidth="120.0" text="Delete" />
+        <Button fx:id="homeBtn" accessibleHelp="Return to appointment home screen." layoutX="656.0" layoutY="735.0" mnemonicParsing="false" onAction="#openAppointmentHomeScreen" prefHeight="47.0" prefWidth="120.0" text="App Home" />
+        <Button fx:id="exitBtn" accessibleHelp="Exit program." layoutX="784.0" layoutY="735.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <Label fx:id="iDLbl" layoutX="24.0" layoutY="66.0" prefHeight="17.0" prefWidth="120.0" text="Appointment ID: " />
+        <Label fx:id="titleLbl" layoutX="24.0" layoutY="90.0" text="Title: " />
+        <Label fx:id="descriptionLbl" layoutX="24.0" layoutY="114.0" text="Description: " />
+        <Label fx:id="locationLbl" layoutX="24.0" layoutY="185.0" text="Location:" />
+        <Label fx:id="contactLbl" layoutX="24.0" layoutY="216.0" prefHeight="17.0" prefWidth="83.0" text="Contact:" />
+        <Label fx:id="typeLbl" layoutX="24.0" layoutY="242.0" text="Type:" />
+        <Label fx:id="curAppIdLbl" contentDisplay="CENTER" layoutX="176.0" layoutY="66.0" prefHeight="17.0" prefWidth="113.0" text="ID here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="curTitleLbl" contentDisplay="CENTER" layoutX="115.0" layoutY="90.0" prefHeight="17.0" prefWidth="227.0" text="Title here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="curDescLbl" alignment="TOP_LEFT" layoutX="115.0" layoutY="118.0" prefHeight="54.0" prefWidth="227.0" text="Description here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="curLocLbl" layoutX="115.0" layoutY="185.0" prefHeight="17.0" prefWidth="227.0" text="Location here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="curContactLbl" layoutX="115.0" layoutY="216.0" prefHeight="17.0" prefWidth="227.0" text="Contact name here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="curTypeLbl" layoutX="115.0" layoutY="242.0" prefHeight="17.0" prefWidth="227.0" text="Type of app here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Separator layoutX="22.0" layoutY="89.0" prefHeight="3.0" prefWidth="227.0" />
+        <Separator layoutX="22.0" layoutY="113.0" prefHeight="3.0" prefWidth="227.0" />
+        <Separator layoutX="22.0" layoutY="175.0" prefHeight="3.0" prefWidth="227.0" />
+        <Separator layoutX="22.0" layoutY="211.0" prefHeight="3.0" prefWidth="227.0" />
+        <Separator layoutX="23.0" layoutY="236.0" prefHeight="3.0" prefWidth="227.0" />
+        <Label fx:id="startTimeLbl" layoutX="24.0" layoutY="270.0" text="Start time:" />
+        <Label fx:id="endTimeLbl" layoutX="24.0" layoutY="303.0" text="End time:" />
+        <Label fx:id="curStartTimeLbl" layoutX="115.0" layoutY="270.0" prefHeight="17.0" prefWidth="227.0" text="Current start time here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="curEndTimeLbl" layoutX="115.0" layoutY="303.0" prefHeight="17.0" prefWidth="227.0" text="Current end time here">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+        <Separator layoutX="22.0" layoutY="265.0" prefHeight="3.0" prefWidth="227.0" />
+        <Separator layoutX="22.0" layoutY="292.0" prefHeight="3.0" prefWidth="227.0" />
+        <Label fx:id="instructionsLbl" layoutX="25.0" layoutY="363.0" prefHeight="47.0" prefWidth="429.0" text="After you've made your desired changes, click update to save the new changes to the database." wrapText="true" />
+        <TextField fx:id="locationField" disable="true" layoutX="375.0" layoutY="135.0" prefHeight="47.0" prefWidth="176.0" promptText="New location" />
+        <TextField fx:id="typeField" disable="true" layoutX="375.0" layoutY="188.0" prefHeight="47.0" prefWidth="176.0" promptText="New type" />
+        <TextField fx:id="titleField" disable="true" layoutX="375.0" layoutY="86.0" prefHeight="47.0" prefWidth="176.0" promptText="New title" />
+        <ComboBox fx:id="contactBox" disable="true" layoutX="568.0" layoutY="146.0" prefHeight="25.0" prefWidth="176.0" promptText="Select contact" />
+        <TextArea fx:id="descriptionField" disable="true" layoutX="568.0" layoutY="278.0" prefHeight="67.0" prefWidth="335.0" promptText="New Description" wrapText="true" />
+        <Label fx:id="deleteInstructLbl" layoutX="475.0" layoutY="363.0" prefHeight="47.0" prefWidth="429.0" text="If you wish to delete an existing appointment, select it from the table. Verify the information is the correct appointment, then press the delete button." wrapText="true" />
+        <Label fx:id="infoUpdateLbl" layoutX="401.0" layoutY="24.0" prefHeight="19.0" prefWidth="175.0" text="Information to Update">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+      <TextField fx:id="startTimeField" disable="true" layoutX="375.0" layoutY="242.0" prefHeight="47.0" prefWidth="176.0" promptText="start time" />
+      <TextField fx:id="endTimeField" disable="true" layoutX="375.0" layoutY="297.0" prefHeight="47.0" prefWidth="176.0" promptText="End time" />
+      <Label fx:id="customerLbl" layoutX="24.0" layoutY="333.0" text="Customer ID:" />
+      <Separator layoutX="22.0" layoutY="324.0" prefHeight="3.0" prefWidth="227.0" />
+      <ComboBox fx:id="customerBox" disable="true" layoutX="568.0" layoutY="190.0" prefHeight="25.0" prefWidth="176.0" promptText="Select Customer" />
+      <Label fx:id="curCustomerLbl" layoutX="115.0" layoutY="333.0" prefHeight="17.0" prefWidth="227.0" text="Current Customer id here" />
+      <TableView fx:id="appTbl" layoutX="19.0" layoutY="425.0" onMouseClicked="#clickAppointment" prefHeight="290.0" prefWidth="888.0">
+        <columns>
+          <TableColumn fx:id="appIdCol" prefWidth="54.0" text="App ID" />
+          <TableColumn fx:id="appTitleCol" prefWidth="93.0" text="Title" />
+          <TableColumn fx:id="appDescCol" prefWidth="109.0" text="Description" />
+          <TableColumn fx:id="appLocCol" prefWidth="112.0" text="Location" />
+          <TableColumn fx:id="appContactCol" prefWidth="72.0" text="Contact" />
+          <TableColumn fx:id="appTypeCol" prefWidth="100.0" text="Type" />
+          <TableColumn fx:id="appStartTimeCol" prefWidth="109.0" text="Start Time" />
+          <TableColumn fx:id="appEndTimeCol" prefWidth="121.0" text="End Time" />
+          <TableColumn fx:id="appDateCol" prefWidth="121.0" text="Date" />
+          <TableColumn fx:id="appCustIdCol" prefWidth="117.0" text="Cust ID" />
+        </columns>
+      </TableView>
+      <!--<Label fx:id="displayUserLbl" layoutX="25.0" layoutY="150.0" prefHeight="17.0" prefWidth="55.0" text="User:" />
+      <Label fx:id="displayCurUseLblr" layoutX="115.0" layoutY="150.0" prefHeight="17.0" prefWidth="83.0" text="Label" />
+      <Separator layoutX="22.0" layoutY="144.0" prefHeight="3.0" prefWidth="227.0" />-->
+      <ComboBox fx:id="userComboBox" disable="true" layoutX="568.0" layoutY="100.0" prefHeight="25.0" prefWidth="175.0" promptText="Select User" />
+    </children>
+</AnchorPane>

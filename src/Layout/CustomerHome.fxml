@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Layout.CustomerHomeController">
+    <children>
+        <Label fx:id="clientLbl" layoutX="31.0" layoutY="18.0" prefHeight="30.0" prefWidth="186.0" text="Customer Home" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </Label>
+        <Label fx:id="currentUserLbl" layoutX="540.0" layoutY="24.0" prefHeight="17.0" prefWidth="103.0" text="user" />
+        <Label fx:id="userLbl" layoutX="464.0" layoutY="24.0" prefHeight="17.0" prefWidth="66.0" text="Logged in:" />
+        <Label fx:id="langLbl" layoutX="464.0" layoutY="51.0" prefHeight="17.0" prefWidth="66.0" text="Language:" />
+        <Label fx:id="currentLangLbl" layoutX="540.0" layoutY="51.0" prefHeight="17.0" prefWidth="103.0" text="English" />
+        <Button fx:id="custAddBtn" accessibleHelp="Add a customer." layoutX="31.0" layoutY="321.0" mnemonicParsing="false" onAction="#openCustomerAddScreen" prefHeight="47.0" prefWidth="120.0" text="Add" />
+        <Button fx:id="custUpdateBtn" accessibleHelp="Update existing customer." layoutX="199.0" layoutY="321.0" mnemonicParsing="false" onAction="#openCustomerUpdateScreen" prefHeight="47.0" prefWidth="120.0" text="Update" />
+        <Button fx:id="custExitBtn" accessibleHelp="Exit program." layoutX="530.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="47.0" prefWidth="120.0" text="Exit" />
+        <Button fx:id="homeBtn" accessibleHelp="Return to home screen." layoutX="367.0" layoutY="321.0" mnemonicParsing="false" onAction="#openHomeScreen" prefHeight="47.0" prefWidth="120.0" text="Home" />
+        <TableView fx:id="custTbl" layoutX="31.0" layoutY="82.0" prefHeight="226.0" prefWidth="619.0">
+            <columns>
+                <TableColumn fx:id="custIDCol" prefWidth="75.0" text="Customer ID" />
+                <TableColumn fx:id="custNameCol" prefWidth="89.0" text="Name" />
+                <TableColumn fx:id="custAddressCol" prefWidth="268.0" text="Address" />
+                <TableColumn fx:id="custPCodeCol" prefWidth="87.0" text="Postal Code" />
+                <TableColumn fx:id="custPhoneCol" prefWidth="99.0" text="Phone" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
